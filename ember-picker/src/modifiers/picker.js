@@ -48,6 +48,7 @@ export default class PickerModifier extends Modifier {
   }
 
   modify(element, positional, named) {
+    if(this.picker) return;
     const options = this._options(element, positional, named);
 
     this.picker = new Picker(options);
